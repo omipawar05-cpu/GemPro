@@ -4,7 +4,7 @@ import os
 
 app = Flask(__name__)
 # Render will provide this from your Environment Variables
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('postgresql://postgres:zIXYDXoRaDoXjNPn@db.dwbphotswgudwvnbrjay.supabase.co:5432/postgres')
+app.config['DATABASE_URI'] = os.environ.get('postgresql://postgres:zIXYDXoRaDoXjNPn@db.dwbphotswgudwvnbrjay.supabase.co:5432/postgres')
 db = SQLAlchemy(app)
 
 class Leaderboard(db.Model):
